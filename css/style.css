@@ -214,7 +214,11 @@ h6,
         color: var(--dark);
     }
 }
-
+ul {
+    --icon-space: 1.3em;
+    list-style: none;
+    padding: 0;
+  }
 
 /*** Carousel ***/
 .carousel-caption {
@@ -357,6 +361,8 @@ h6,
     opacity: 1;
 }
 
+
+  
 
 /*** Miscellaneous ***/
 @media (min-width: 991.98px) {
