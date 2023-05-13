@@ -231,12 +231,23 @@ ul {
     z-index: 1;
 }
 .transparent{
+    /* height: 255px; */
     padding: 10px;
-    background: transparent;
-    backdrop-filter: blur(5px);
+    margin: 0;
+    /* padding: 10px; */
+    background: transparent ;
+    backdrop-filter: blur(5px) !important;
     /* border: 1px solid rgb(241,206,106,0.8); */
 
 }
+.blur-div {
+    backdrop-filter: blur(5px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
 @media (max-width: 576px) {
     .carousel-caption h5 {
@@ -324,15 +335,16 @@ ul {
 
 
 /*** Service ***/
-.service-item {
+/* .service-item {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: relative; */
-    height: 300px;
-    padding: 0 10px;
-    /* transition: .5s; */
+} */
+.card_services{
+    background-color: #f1ce6a;
+    box-shadow: #f1ce6a; 
 }
+
 
  .service-icon {
     margin-top: 10px;
@@ -387,6 +399,7 @@ ul {
 .bg-header {
     background: linear-gradient(rgb(241,206,106,0.3), rgb(241,206,106,0.3)), url(../img/carousel-2.jpg) center center no-repeat;
     background-size: cover;
+    height: 400px;
 }
 
 .link-animated a {
