@@ -244,7 +244,7 @@ ul {
     backdrop-filter: blur(5px);
     height: 100%;
     width: 100%;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
   }
@@ -396,12 +396,33 @@ ul {
     z-index: 99;
 }
 
-.bg-header {
+/* .bg-header {
     background: linear-gradient(rgb(241,206,106,0.3), rgb(241,206,106,0.3)), url(../img/carousel-2.jpg) center center no-repeat;
     background-size: cover;
-    height: 400px;
+    filter: blur(5px);
+    z-index: 1;
+} */
+.bg-header {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .bg-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(241,206,106,0.3), rgb(241,206,106,0.3)), url(../img/carousel-2.jpg) center center no-repeat;
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+  }
+.text_post{
+    position: relative;
+    z-index: 0;
 }
-
 .link-animated a {
     transition: .5s;
 }
